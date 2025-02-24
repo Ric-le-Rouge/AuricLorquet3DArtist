@@ -1,0 +1,220 @@
+*{
+    font-family: roboto, sans-serif;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --blue: #1E83E3;
+    --lightblue: #8ac4fa;
+    --grey: #3D4D5C;
+    --darkgrey: #141A1F;
+    --darkgreytr: #141A1FBF;
+    --headerheight: 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    background-color: #141A1F;
+    background-image: url(MediaFiles/Background/BG_AbstractSciFi_01.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    z-index: 2;
+    box-sizing: content-box;
+    height: fit-content;
+    background-color: var(--darkgrey);
+    position: sticky;
+    display: flow-root;
+    padding: 30px 10px 10px 10px;
+    top: -20px;
+    width: 100%-20px;
+    margin: 0px 0px 15px 0px;
+}
+
+.headermain{
+    height: var(--headerheight);
+}
+
+#Logo1{
+    height: var(--headerheight);
+    float: left;
+    margin-right: 25px;
+}
+
+#Title{
+    line-height: var(--headerheight);
+    display: inline;
+    color: var(--blue);
+}
+
+.navbar{
+    height: var(--headerheight);
+    width: fit-content;
+    float: right;
+    overflow: hidden;
+}
+
+.navbar ul{
+    list-style-type: none;
+    line-height: var(--headerheight);
+}
+
+.navbar li{
+    font-size: 1.17em;
+    float: left;
+}
+
+.navbar a{
+    display: block;
+    margin: 0px 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover{
+    color: var(--blue);
+}
+
+.navbar a:active{
+    color: var(--lightblue);
+}
+
+.blurbackground{
+    background-color: var(--darkgreytr);
+    backdrop-filter: blur(8px);
+    padding: 0px 0px 10%;
+}
+
+.blurbackground .topline{
+    color: var(--grey);
+    background-color: var(--grey);
+    border: none;
+    height: 3px;
+}
+
+.slider {
+    z-index: 1;
+    position: relative;
+    padding: 0px 20%;
+    margin: 50px 0px 10%;
+    overflow: hidden;
+}
+
+.slide{
+    width: 100%;
+    display: none;
+}
+
+.displaySlide {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.slider button:hover {
+    background-color: var(--lightblue);
+}
+
+/*.slider button:active {
+    transform-origin: center center;
+    animation: shrink;
+    animation-duration: .05s;
+}*/
+
+.prev {
+    left: calc(20% - 60px)
+}
+
+.next {
+    right: calc(20% - 60px);
+}
+
+@keyframes fadeIn {
+    from {opacity: .5;}
+    to {opacity: 1;}
+}
+
+@keyframes shrink {
+    50% {transform: scale(.95,.95);}
+}
+
+.contentboxtext{
+    padding: 0px 20%;
+    margin: 100px 0px 50px;
+}
+
+h1{
+    font-size: 3.5em;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+h2{
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.separator {
+    margin: 50px 30%;
+}
+
+.contentboxtext p{
+    font-size: 1.17em;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+footer {
+    background-color: var(--darkgrey);
+    padding: 50px 0px;
+}
+
+footer p {
+    font-size: 1.17em;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.flexcontainer {
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+    column-gap: 5%;
+}
+
+.contactbox {
+    height: 75px;
+    width: 75px;
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+.contactbox:hover {
+    background-color: var(--lightblue);
+}
+
+.contactbox img {
+    padding: 10px;
+}

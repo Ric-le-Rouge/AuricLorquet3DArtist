@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Auric Lorquet 3D Artist</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="personal website">
+    <meta name="keywords" content="3D, Artist">
+    <meta name="author" content="Auric Lorquet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg" href="MediaFiles/Monogram/MonogramAL_01_vect.svg">
+</head>
+
+<body>
+
+    <header>
+        <div class="headermain">
+            <img src="MediaFiles/Monogram/MonogramAL_01_vect.svg" id="Logo1">
+            <h2 id="Title">Auric Lorquet 3D Artist</h2>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#top">Showreel</a></li>
+                    <li><a href="index.html#AboutMe">About me</a></li>
+                    <li><a href="index.html#Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>        
+    </header>
+
+    <main>
+        <h1 id="Showreel">Showreel</h1>
+        <div class="slider">
+            <div class="slides">
+                <img class="slide" src="MediaFiles/Projects/Lighting_Studio_2020_AuricLorquet.webp" alt="Img1">
+                <img class="slide" src="MediaFiles/Projects/Quick_ConceptArt_Cyberpunk_2021_AuricLorquet.webp" alt="Img2">
+                <img class="slide" src="MediaFiles/Projects/TexturingScene2021_AuricLorquet.webp" alt="Img3">
+                <video class="slide" src="MediaFiles/Projects/Realtimeenvironment 2022 Auriclorquet.webm" autoplay="true" loop="true"></video>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094</button>
+            <button class="next" onclick="nextSlide()">&#10095</button>
+        </div>
+        <div class="blurbackground">
+            <hr class="topline">
+            <div class="contentboxtext">
+                <h1 id="AboutMe">About me</h1>
+                <p>
+                    I am originaly a computer graphics artist
+                    specialized in 3D VFX. I’m facinated by music
+                    and Cinema. I am a good teamplayer and I’m
+                    really attentive to work neatly. I touch at
+                    everything in 3D and in computer graphics in
+                    general.
+                </p>
+                <p>
+                    Since 2023 I also started to work as an
+                    audiovisual technician, combining my
+                    knowledge of IT, video and sound to find
+                    solutions for every situation. I am known for
+                    being versatile and reliable.
+                    I am used to work with dozens of softwares
+                    that I will not enumerate here and it is quite
+                    easy for me to learn new ones.
+                    I have a first aid certificate.
+                </p>
+            </div>
+            <hr class="separator">
+        </div>
+        <script src="index.js"></script>
+    </main>
+
+    <Footer>
+        <h2 id="Contact">Contact</h2>
+        <div class="flexcontainer">
+            <a class="contactbox" href="https://www.artstation.com/ricau" target="_blank">
+                <img class="icon" src="MediaFiles/Icons/Icon_ArtStation_white_vect.svg">
+            </a>
+            <a class="contactbox" href="https://www.linkedin.com/in/auric-lorquet-265865221/" target="_blank">
+                <img class="icon" src="MediaFiles/Icons/Icon_LinkedIn_white_vect.svg">
+            </a>
+            <a class="contactbox" href="mailto:auric99@netc.eu">
+                <img class="icon" src="MediaFiles/Icons/Icon_Mail_white_vect.svg">
+            </a>
+        </div>
+        <hr class="separator">
+        <p>auric99@netc.eu</p>
+        <p>+32 470 57 76 32</p>
+        <p>5310 Éghezée</p>
+    </Footer>
+
+</body>
+
+</html>
