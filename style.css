@@ -5,9 +5,11 @@
     padding: 0px;
 }
 
-:root{
+:root {
     --blue: #1E83E3;
+    --bluetr: #1e84e380;
     --lightblue: #8ac4fa;
+    --whitetr: #deefffd3;
     --grey: #3D4D5C;
     --darkgrey: #141A1F;
     --darkgreytr: #141A1FBF;
@@ -18,7 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     margin: 0px;
     background-color: #141A1F;
     background-image: url(MediaFiles/Background/BG_AbstractSciFi_01.webp);
@@ -27,7 +29,35 @@ body{
     background-size: cover;
 }
 
-header{
+#FullImageView {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--darkgreytr);
+    backdrop-filter: blur(8px);
+    text-align: center;
+}
+
+#FullImage, #FullVideo {
+    padding: 2.5vh 2.5%;
+    padding-top: 50px;
+    max-width: 95%;
+    max-height: 90vh;
+}
+
+#CloseButton {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+header {
     z-index: 2;
     box-sizing: content-box;
     height: fit-content;
@@ -40,61 +70,91 @@ header{
     margin: 0px 0px 15px 0px;
 }
 
-.headermain{
+.headermain {
     height: var(--headerheight);
 }
 
-#Logo1{
+#Logo1 {
     height: var(--headerheight);
     float: left;
     margin-right: 25px;
+    animation-name: SpawnZ;
+    animation-duration: 1s;
 }
 
-#Title{
+#Title {
     line-height: var(--headerheight);
-    display: inline;
+    float: left;
+    margin: 0px;
     color: var(--blue);
+    animation-name: SpawnRight;
+    animation-duration: 1s;
 }
 
-.navbar{
+.navbar {
     height: var(--headerheight);
     width: fit-content;
     float: right;
-    overflow: hidden;
+    overflow: visible;
 }
 
-.navbar ul{
+.navbar ul {
     list-style-type: none;
     line-height: var(--headerheight);
 }
 
-.navbar li{
+.navbar li {
     font-size: 1.17em;
     float: left;
+    animation-name: SpawnZ;
+    animation-duration: 1s;
 }
 
-.navbar a{
+.navbar a {
     display: block;
     margin: 0px 15px;
     text-decoration: none;
     text-align: center;
+    transition: .2s;
 }
 
-.navbar a:hover{
+.navbar a:hover {
+    transition: .2s;
     color: var(--blue);
 }
 
-.navbar a:active{
+.navbar a:active {
+    transition: .05s;
     color: var(--lightblue);
+    transform: scale(.8);
 }
 
-.blurbackground{
+main h1.in-view {
+    animation-name: SpawnLeft;
+    animation-duration: 1s;
+}
+
+hr.in-view {
+    animation-name: SpawnExpand;
+    animation-duration: 1s;
+}
+
+p.in-view {
+    animation-name: SpawnRight;
+    animation-duration: 1s;
+}
+
+#Showreel {
+    min-height: 100vh;
+}
+
+.blurbackground {
     background-color: var(--darkgreytr);
     backdrop-filter: blur(8px);
-    padding: 0px 0px 10%;
+    padding: 0px 10px 10%;
 }
 
-.blurbackground .topline{
+.blurbackground .topline {
     color: var(--grey);
     background-color: var(--grey);
     border: none;
@@ -107,83 +167,202 @@ header{
     padding: 0px 20%;
     margin: 50px 0px 10%;
     overflow: hidden;
+    justify-content: center;
+    animation-name: SpawnZ;
+    animation-duration: 1s;
 }
 
-.slide{
+.slide {
     width: 100%;
     display: none;
 }
 
+.slide img, video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slide h2{
+    position: absolute;
+    font-size: 2em;
+    bottom: 35px;
+    left: calc(20% + 35px);
+    margin: 0px;
+    animation-name: SpawnRight;
+    animation-duration: 1s;
+}
+
 .displaySlide {
     display: block;
-    animation-name: fadeIn;
+    animation-name: FadeIn;
     animation-duration: 1s;
 }
 
 .slider button {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    padding: 10px 15px;
+    top: calc(50% - 40px);
+    padding: 15px;
+    height: 80px;
     background-color: var(--blue);
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    transition: .2s;
 }
 
 .slider button:hover {
     background-color: var(--lightblue);
 }
 
-/*.slider button:active {
+.slider button:active {
     transform-origin: center center;
-    animation: shrink;
+    animation: Shrink;
     animation-duration: .05s;
-}*/
+}
 
 .prev {
-    left: calc(20% - 60px)
+    left: calc(20% - 60px);
+    padding-left: 12px !important;
 }
 
 .next {
     right: calc(20% - 60px);
+    padding-right: 12px !important;
 }
 
-@keyframes fadeIn {
-    from {opacity: .5;}
-    to {opacity: 1;}
-}
-
-@keyframes shrink {
-    50% {transform: scale(.95,.95);}
-}
-
-.contentboxtext{
+.contentboxmain {
     padding: 0px 20%;
     margin: 100px 0px 50px;
 }
 
-h1{
+.contentboxmain p {
+    font-size: 1.17em;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.columnscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    gap: 5%;
+}
+
+.columnscontainer.in-view {
+    animation-name: SpawnLeft;
+    animation-duration: 1s;
+}
+
+.columnsection {
+    position: relative;
+    width: 30%;
+    min-width: 300px;
+}
+
+.columnsection hr {
+    margin: 15px 0px;
+}
+
+.columnsection ul {
+    font-size: 1.2em;
+    padding-left: 20px;
+}
+
+.contentboxtiles {
+    margin: 80px 0px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.contentboxtiles.in-view {
+    animation-name: SpawnRight;
+    animation-duration: 1s;
+}
+
+.tile {
+    z-index: 1;
+    position: relative;
+    margin: 2%;
+    width: 15%;
+    aspect-ratio: 1/1;
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: transparent;
+}
+
+.overtile {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--darkgreytr);
+    backdrop-filter: blur(5px);
+    cursor: default;
+    text-align: center;
+    font-weight: bold;
+}
+
+.overtile p {
+    font-size: 1em;
+    margin: 0px 10px;
+}
+
+.tile:hover .overtile {
+    visibility: visible;
+    animation: CompleteFadeIn;
+    animation-duration: .2s;
+}
+
+.tile:hover {
+    z-index: 2;
+    transform: scale(1.2);
+    transition: .2s;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: var(--blue);
+}
+
+.logofull img {
+    width: 100%;
+}
+
+.logoreduced img {
+    width: 90%;
+    margin: 5%;
+}
+
+h1 {
     font-size: 3.5em;
     text-align: center;
     margin: 50px 0px;
 }
 
-h2{
+h2 {
     text-align: center;
     margin: 20px 0px;
 }
 
-.separator {
-    margin: 50px 30%;
+h3 {
+    font-size: 2em;
+    margin: 15px 0px 10px;
 }
 
-.contentboxtext p{
-    font-size: 1.17em;
-    margin-top: 25px;
-    margin-bottom: 25px;
+.separator {
+    margin: 100px 30%;
 }
 
 footer {
@@ -191,10 +370,56 @@ footer {
     padding: 50px 0px;
 }
 
+.download {
+    padding: 15px;
+    position: relative;
+    display: block;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: fit-content;   
+    background-color: var(--blue);
+    color: white;
+    line-height: 40px;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .2s;
+    text-decoration: none;
+}
+
+.download:hover {
+    background-color: var(--lightblue);
+    transform: scale(1.1);
+}
+
+.download:active {
+    transform-origin: center center;
+    animation: Shrink;
+    animation-duration: .05s;
+}
+
+.download img {
+    float: left;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.download.in-view {
+    animation-name: SpawnLeft;
+    animation-duration: 1s;
+}
+
 footer p {
     font-size: 1.17em;
     text-align: center;
     margin: 10px 0px;
+}
+
+footer .separator {
+    margin: 50px 30%;
 }
 
 .flexcontainer {
@@ -209,12 +434,48 @@ footer p {
     width: 75px;
     background-color: var(--blue);
     border-radius: 10px;
+    transition: .2s;
 }
 
 .contactbox:hover {
     background-color: var(--lightblue);
+    transform: scale(1.2);
 }
 
 .contactbox img {
     padding: 10px;
+}
+
+@keyframes FadeIn {
+    from {opacity: .5;}
+    to {opacity: 1;}
+}
+
+@keyframes CompleteFadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes Shrink {
+    50% {transform: scale(.8,.8);}
+}
+
+@keyframes SpawnRight{
+    from {opacity: 0; transform: translateX(250px);}
+    to {opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes SpawnLeft{
+    from {opacity: 0; transform: translateX(-250px);}
+    to {opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes SpawnZ{
+    from {opacity: 0; transform: scale(0.2);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes SpawnExpand{
+    from {transform: scaleX(0);}
+    tp {transform: scaleX(1);}
 }

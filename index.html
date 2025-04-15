@@ -21,7 +21,7 @@
             <h2 id="Title">Auric Lorquet 3D Artist</h2>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#top">Showreel</a></li>
+                    <li><a href="index.html#Top">Showreel</a></li>
                     <li><a href="index.html#AboutMe">About me</a></li>
                     <li><a href="index.html#Contact">Contact</a></li>
                 </ul>
@@ -30,42 +30,271 @@
     </header>
 
     <main>
-        <h1 id="Showreel">Showreel</h1>
-        <div class="slider">
-            <div class="slides">
-                <img class="slide" src="MediaFiles/Projects/Lighting_Studio_2020_AuricLorquet.webp" alt="Img1">
-                <img class="slide" src="MediaFiles/Projects/Quick_ConceptArt_Cyberpunk_2021_AuricLorquet.webp" alt="Img2">
-                <img class="slide" src="MediaFiles/Projects/TexturingScene2021_AuricLorquet.webp" alt="Img3">
-                <video class="slide" src="MediaFiles/Projects/Realtimeenvironment 2022 Auriclorquet.webm" autoplay="true" loop="true"></video>
+        <div id="FullImageView">
+            <img id="FullImage">
+            <video id="FullVideo" autoplay loop mute></video>
+            <span id="CloseButton" onclick="CloseFullView()">&times;</span>
+        </div>
+        <div>
+            <h1 class="animate">Showreel</h1>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <h2>Motion Design</h2>
+                        <video class="video" src="MediaFiles/Projects/Magicloomxr_Motiondesign_AuricLorquet.webm" alt="Img1" autoplay loop muted onclick="FullViewVideo(this.src)"></video>
+                    </div>
+                    <div class="slide">
+                        <h2>Subdivision Modeling</h2>
+                        <img src="MediaFiles/Projects/Piano_AuricLorquet.webp" alt="Img2" onclick="FullViewImage(this.src)">
+                    </div>
+                    <div class="slide">
+                        <h2>Lighting</h2>
+                        <img src="MediaFiles/Projects/Lighting_Studio_2020_AuricLorquet.webp" alt="Img3" onclick="FullViewImage(this.src)">
+                    </div>
+                    <div class="slide">
+                        <h2>Realistic Integration</h2>
+                        <video class="video" src="MediaFiles/Projects/T-Rexonroad_AuricLorquet.webm" alt="Img4" autoplay loop muted onclick="FullViewVideo(this.src)"></video>
+                    </div>
+                    <div class="slide">
+                        <h2>Texturing</h2>
+                        <img src="MediaFiles/Projects/TexturingScene2021_AuricLorquet.webp" alt="Img5" onclick="FullViewImage(this.src)">
+                    </div>
+                    <div class="slide">
+                        <h2>Real Time Environment</h2>
+                        <video class="video" src="MediaFiles/Projects/Realtimeenvironment_2022_Auriclorquet.webm" alt="Img6" autoplay loop muted onclick="FullViewVideo(this.src)"></video>
+                    </div>
+                    <div class="slide">
+                        <h2>Quick Concept Art</h2>
+                        <img src="MediaFiles/Projects/Quick_ConceptArt_Cyberpunk_2021_AuricLorquet.webp" alt="Img7" onclick="FullViewImage(this.src)">
+                    </div>
+                    <div class="slide">
+                        <h2>Compositing</h2>
+                        <video class="video" src="MediaFiles/Projects/TFE_Perseverance_AuricLorquet.webm" alt="Img8" autoplay loop muted onclick="FullViewVideo(this.src)"></video>
+                    </div>
+                    <div class="slide">
+                        <h2>Character Modeling</h2>
+                        <video class="video" src="MediaFiles/Projects/TFECharacter_Turnaround_Auriclorquet.webm" alt="Img9" autoplay loop muted onclick="FullViewVideo(this.src)"></video>
+                    </div>
+                    <div class="slide">
+                        <h2>Procedural Texturing</h2>
+                        <video class="video" src="MediaFiles/Projects/Procedural_MedievalGlassTexture_AuricLorquet.webm" alt="Img10" autoplay loop muted onclick="FullViewVideo(this.src)"></video>
+                    </div>
+                </div>
+                <button class="prev" onclick="prevSlide()"><img src="MediaFiles/Icons/Icon_ArrowL_short_vect.svg" width="25px"></button>
+                <button class="next" onclick="nextSlide()"><img src="MediaFiles/Icons/Icon_ArrowR_short_vect.svg" width="25px"></button>
             </div>
-            <button class="prev" onclick="prevSlide()">&#10094</button>
-            <button class="next" onclick="nextSlide()">&#10095</button>
         </div>
         <div class="blurbackground">
             <hr class="topline" id="AboutMe">
-            <div class="contentboxtext">
-                <h1>About me</h1>
-                <p>
-                    I am originaly a computer graphics artist
-                    specialized in 3D VFX. I’m facinated by music
-                    and Cinema. I am a good teamplayer and I’m
-                    really attentive to work neatly. I touch at
-                    everything in 3D and in computer graphics in
-                    general.
+            <div class="contentboxmain">
+                <h1 class="animate">About me</h1>
+                <p class="animate">
+                    Passionate about cinema and graphic art since my childhood, I graduated a bachelor of computer graphics with a specialization in 3D VFX at the HEAJ Namur in Belgium. <br>
+                    Versatility is probably my number one quality. I have interest in nearly every stage of the workflow from the early conception to the fine tuning of the last results.
+                    I have various skills from 3D modeling to lighting and color grading as well as animation or rigging. <br>
+                    In the same way, although being primarily oriented towards 3D creation, I also often invest time and skills in 2D creation as bitmap and vector graphic assets are used a lot for those projects.
+                    My artistic knowledge is well balanced with technical understanding of the tools I use. I am never afraid to "loose" time and braincells to completely master what I am doing.
+                    In this way, I love using node graph architecture softwares or sometimes a little classic programming to create my own procedural tools that I use in my projects.
                 </p>
-                <p>
-                    Since 2023 I also started to work as an
-                    audiovisual technician, combining my
-                    knowledge of IT, video and sound to find
-                    solutions for every situation. I am known for
-                    being versatile and reliable.
-                    I am used to work with dozens of softwares
-                    that I will not enumerate here and it is quite
-                    easy for me to learn new ones.
-                    I have a first aid certificate.
+                <p class="animate">
+                    Since 2023 I also started to work as a freelance audiovisual technician, combining my knowledge of IT, video and sound to find solutions for every situation. 
+                    I am known for being versatile, reliable and having self control.
                 </p>
             </div>
-            <hr class="separator">
+            <hr class="separator animate">
+            <div class="contentboxmain">
+                <h1 class="animate">My skills</h1>
+                <p class="animate">
+                    I have various skills throughout the whole production pipeline, from the early concept arts to the last color grading.
+                </p>
+                <div class="columnscontainer animate">
+                    <div class="columnsection">
+                        <h3>3D computer graphics</h3>
+                        <hr>
+                        <ul>
+                            <li>organic and hard surface modeling</li>
+                            <li>retopology</li>
+                            <li>UV unfolding</li>
+                            <li>procedural and hand made texturing</li>
+                            <li>rigging and skinning</li>
+                            <li>animation</li>
+                            <li>lighting and rendering</li>
+                            <li>real time engine integration</li>
+                            <li>fluid simulation</li>
+                        </ul>
+                    </div>
+                    <div class="columnsection">
+                        <h3>2D computer graphics</h3>
+                        <hr>
+                        <ul>
+                            <li>drawing and digital painting</li>
+                            <li>photomontage</li>
+                            <li>vector graphics</li>
+                            <li>layout</li>
+                            <li>web design</li>
+                            <li>storyboard</li>
+                        </ul>
+                    </div>
+                    <div class="columnsection">
+                        <h3>Video</h3>
+                        <hr>
+                        <ul>
+                            <li>VFX creation and integration</li>
+                            <li>photography</li>
+                            <li>video editing</li>
+                            <li>color grading</li>
+                            <li>motion design</li>
+                            <li>compositing</li>
+                        </ul>
+                    </div>
+                    <div class="columnsection">
+                        <h3>Languages</h3>
+                        <hr>
+                        <ul>
+                            <li>french : native language</li>
+                            <li>english : fluent</li>
+                            <li>dutch : very basic knowledge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="separator animate">
+            <div class="contentboxmain">
+                <h1 class="animate">The softwares I use</h1>
+                <div class="contentboxtiles  animate">
+                    <div class="tile full" id="tile1" title="Adobe Photoshop">
+                        <div class="overtile">
+                            <p>Photoshop</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Photoshop_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>Illustrator</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Illustrator_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>InDesign</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_InDesign_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>Premiere pro</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_PremierePro_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>After Effects</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_AfterEffects_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>Lightroom</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Lightroom_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>Substance Painter</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_SubstancePainter_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>Substance Designer</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_SubstanceDesigner_Vect.svg">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>Maya</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Maya_Vect.svg">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>3DSMax</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_3DSMax_Vect.svg">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>Blender</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Blender_Vect.svg">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>Zbrush</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Zbrush_White_Vect.svg">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>Marmoset<br>Toolbag</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_MarmosetToolbag_512px.webp">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>3D Coat</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_3DCoat_Vect.svg">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>Gaea</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Gaea_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>Houdini</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Houdini_Vect.svg">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>DaVinci<br>Resolve</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_DavinciResolve_512px.webp">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>Fusion<br>Studio</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_FusionStudio_512px.webp">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>Unity</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_Unity_White_Vect.svg">
+                    </div>
+                    <div class="tile logoreduced">
+                        <div class="overtile">
+                            <p>Unreal Engine</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_UnrealEngine_White_Vect.svg">
+                    </div>
+                    <div class="tile logofull">
+                        <div class="overtile">
+                            <p>V-Ray</p>
+                        </div>
+                        <img src="MediaFiles/Icons/Softwares/Icon_VRay_Vect.svg">
+                    </div>
+                </div>
+            </div>
+            <a class="download animate" href="MediaFiles/CV/CV_3DArtist_Auric_Lorquet.pdf" download>
+                <img src="MediaFiles/Icons/Icon_Download_Thin_vect.svg" alt="download logo">
+                Download CV
+            </a>
+            <!--<hr class="separator animate">-->
         </div>
         <script src="index.js"></script>
     </main>
