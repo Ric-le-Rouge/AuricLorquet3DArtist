@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2048 2048" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Unity" transform="matrix(2.56016,0,0,2.56016,6.9285e-14,0)">
+        <g id="Softwares">
+            <path id="Unity1" serif:id="Unity" d="M663.275,639.975L520.075,400L663.275,160.025L733.35,400L663.275,639.975ZM346.6,616.675L166.675,439.975L453.4,439.975L596.6,679.95L346.6,616.675ZM346.6,179.925L596.6,116.65L453.4,356.625L163.275,356.625C163.275,360.025 346.6,179.925 346.6,179.925ZM713.275,0L386.75,83.325L336.75,166.65L239.975,166.65L-0,399.975L239.975,633.3L336.75,633.3L383.35,716.625L710.05,799.95L796.625,483.275L750.025,399.95L800.025,316.625L713.275,0Z" style="fill:white;fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
